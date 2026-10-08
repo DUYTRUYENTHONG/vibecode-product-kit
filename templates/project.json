@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "product": { "name": "Example product", "key": "DEMO" },
+  "features": [{
+    "id": "DEMO-001",
+    "title": "Deliver the first durable user journey",
+    "owner": "unassigned",
+    "status": "planned",
+    "risk": "medium",
+    "outcome": "A user completes the primary task and can recover the saved result after restarting.",
+    "outOfScope": ["Billing and unrelated integrations"],
+    "dependencies": [],
+    "acceptance": [{ "id": "AC1", "outcome": "The acknowledged result survives a restart.", "scenario": "primary-journey-restart" }],
+    "metrics": [{ "name": "completion_rate", "definition": "Completed primary journeys / valid started journeys in the same observation window.", "target": "Set after measuring the baseline", "measurement": "not_measured" }],
+    "candidateSha": null,
+    "blocker": null,
+    "evidence": [],
+    "previewApproval": null,
+    "deployment": null
+  }]
+}

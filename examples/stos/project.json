@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "product": { "name": "STOS publishing-first example", "key": "STOS" },
+  "features": [
+    {
+      "id": "STOS-R28", "jiraKey": "SCRUM-39", "title": "Canonical versioned page document", "owner": "unassigned", "status": "planned", "risk": "high",
+      "outcome": "The seller's saved page uses one durable contract across Studio, preview and public rendering.",
+      "outOfScope": ["Billing", "Unrestricted custom scripts"], "dependencies": [],
+      "acceptance": [
+        { "id": "AC1", "outcome": "Acknowledged changes survive a service restart.", "scenario": "page-document-restart" },
+        { "id": "AC2", "outcome": "Another seller cannot read or modify the document.", "scenario": "page-document-tenant-isolation" },
+        { "id": "AC3", "outcome": "Two-tab edits surface conflicts without silently losing acknowledged changes.", "scenario": "page-document-conflict" }
+      ],
+      "metrics": [{ "name": "acknowledged_write_loss", "definition": "Acknowledged revisions missing after restart / acknowledged revisions in the synthetic test batch.", "target": "0", "measurement": "not_measured" }],
+      "candidateSha": null, "blocker": null, "evidence": [], "previewApproval": null, "deployment": null
+    },
+    {
+      "id": "STOS-R05", "jiraKey": "SCRUM-16", "title": "Minimal seller Studio", "owner": "unassigned", "status": "planned", "risk": "medium",
+      "outcome": "A seller can choose a template, edit essential content and understand save state.",
+      "outOfScope": ["Full Canva replacement", "Decorative motion blocking critical actions"], "dependencies": ["STOS-R28"],
+      "acceptance": [
+        { "id": "AC1", "outcome": "Seller edits and ordering match the preview at the saved revision.", "scenario": "studio-edit-preview-parity" },
+        { "id": "AC2", "outcome": "Offline or failed saves retain recoverable changes and never show a false Saved state.", "scenario": "studio-offline-recovery" }
+      ],
+      "metrics": [{ "name": "first_page_completion", "definition": "Unassisted saved first pages / observed eligible first-time sellers within the pilot session.", "target": "Measure baseline before setting improvement target", "measurement": "not_measured" }],
+      "candidateSha": null, "blocker": null, "evidence": [], "previewApproval": null, "deployment": null
+    },
+    {
+      "id": "STOS-R06", "jiraKey": "SCRUM-17", "title": "Publish, share and unpublish", "owner": "unassigned", "status": "planned", "risk": "high",
+      "outcome": "An anonymous buyer can open the intended published revision, while drafts stay private.",
+      "outOfScope": ["Paid subscriptions", "Custom domain purchase"], "dependencies": ["STOS-R28", "STOS-R05"],
+      "acceptance": [
+        { "id": "AC1", "outcome": "Public content matches the approved revision; later draft edits do not leak.", "scenario": "published-revision-parity" },
+        { "id": "AC2", "outcome": "Retrying a publish does not create duplicate logical publications.", "scenario": "publish-retry-idempotency" },
+        { "id": "AC3", "outcome": "Unpublished pages stop serving content within the documented cache bound.", "scenario": "unpublish-cache-propagation" }
+      ],
+      "metrics": [{ "name": "publish_propagation", "definition": "Elapsed seconds from acknowledged publication to anonymous visibility of the matching revision; report median and p95 for a declared test workload.", "target": "Agree a bound before release", "measurement": "not_measured" }],
+      "candidateSha": null, "blocker": null, "evidence": [], "previewApproval": null, "deployment": null
+    }
+  ]
+}
