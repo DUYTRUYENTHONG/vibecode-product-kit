@@ -1,7 +1,7 @@
 {
-  "name": "@duytruyenthong/vibecode-product-kit",
-  "version": "0.1.0",
-  "description": "Evidence-driven product delivery templates, agent skills and an offline validation CLI.",
+  "name": "@duytruyenthong/codex-vibecode-pro-max-kit",
+  "version": "0.2.0",
+  "description": "Codex-native product development kit with agent profiles, skills, optional hooks, approved model routing and evidence-driven delivery.",
   "type": "module",
   "license": "MIT",
   "engines": { "node": ">=22" },
@@ -11,5 +11,5 @@
     "check": "node bin/pdk.mjs validate examples/stos --gate planning"
   },
   "repository": { "type": "git", "url": "https://github.com/DUYTRUYENTHONG/vibecode-product-kit.git" },
-  "files": ["bin", "lib", "templates", "skills", "agents", "prompts", "docs", "examples", "README.md", "LICENSE", "NOTICE.md"]
+  "files": ["bin", "lib", "codex", "templates", "skills", "agents", "prompts", "docs", "examples", "README.md", "LICENSE", "NOTICE.md"]
 }

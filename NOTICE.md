@@ -8,4 +8,7 @@ The upstream project is MIT-licensed. Its user-outcome specifications, acceptanc
 
 If future contributions copy substantial upstream code or text, include the applicable copyright and license notices, identify the exact source revision, and describe adaptations. Do not relabel an upstream file as original work.
 
-Differences: non-destructive setup; no global agent-policy replacement; no autonomous restart or deployment loop; no provider/model-price assumptions; Jira mutation is explicitly out of scope for v0.1.0. These are design choices, not a claim that the reference project is unsafe in every context.
+Differences: non-destructive setup; no global agent-policy replacement; no autonomous restart or deployment loop; no provider-price assumptions; Jira mutation remains out of scope. Version 0.2.0 adds independently implemented Codex profiles, hooks and an explicit owner-approved model preset. It is not a port of every upstream skill. These are design choices, not a claim that the reference project is unsafe in every context.
+
+Codex is an OpenAI product name. This is an independent community project, not
+endorsed by or affiliated with OpenAI or the upstream kit's authors.

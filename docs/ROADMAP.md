@@ -9,7 +9,13 @@
 - Publishing-first STOS example without private production data.
 - Automated CLI/library tests and GitHub Actions CI configuration.
 
+## Implemented in 0.2.0
+- Codex-native installation with seven profiles, six skills and optional lifecycle hooks.
+- Explicit deterministic routing preset and friend-kit adoption playbook.
+- No autonomous scheduler, trust bypass or automatic model dispatch.
+
 ## Proposed, not implemented
+
 - Authenticated Jira reconciliation adapter with conflict protection.
 - Cryptographically trusted CI evidence ingestion and reviewer identity binding.
 - Schema migrations, transition history and multi-release selection.

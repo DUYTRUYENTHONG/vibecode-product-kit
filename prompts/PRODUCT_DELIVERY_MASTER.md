@@ -16,4 +16,8 @@ Use `project.json` and the relevant templates; run the kit validator after recor
 
 Model selection is deterministic from the caller's task/risk policy. Never silently substitute a more expensive model or claim cost savings without measurements. New external integrations, spending, production mutations and credentials stay subject to explicit authorization.
 
+If the owner explicitly adopted `stos-approved`, use the offline `route` command
+documented in docs/MODEL_ROUTING.md. Mark authentication, migrations and tenant
+security as sensitive. Its output is a recommendation, not dispatch or permission.
+
 Close with links to deliverables and evidence, not a generic Done. State whether code was committed, pushed, reviewed, merged, deployed and smoke-tested, each separately.

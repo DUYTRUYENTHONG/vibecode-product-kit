@@ -1,4 +1,4 @@
-# Build brief: Vibecode Product Kit
+# Build brief: Codex Vibecode Pro Max Kit
 
 Build an independently implemented, MIT-licensed product-development kit that anyone can clone or fork. Credit the reference ideas from withkynam/vibecode-pro-max-kit, pin the reviewed revision and do not vendor its agent installer or silently adopt its instructions.
 
@@ -12,5 +12,7 @@ Functional acceptance:
 5. Jira export is review-only, with existing-key mapping and create/update proposals. No automatic external writes, credentials, deployment or endless retries.
 6. Test negative and positive behavior on actual temporary directories, CLI exit codes and state invariants. Provide Windows/Linux CI and clear contribution/security guidance.
 7. Publish only kit source, synthetic examples and public-safe docs to the user's public repository. No STOS customer records, internal credentials or private QA logs.
+8. Provide a separate explicit Codex installer with dry-run default, native named TOML profiles and discoverable local skills. Preserve existing host configuration and refuse conflicting paths or symlink parents. Avoid Claude-only runtime dependencies.
+9. Adopt model routing only through an explicit preset. Keep tool execution separate from model work, and never bypass availability, budget or permission constraints. Optional hooks require human trust and must not implement an infinite retry loop.
 
 Keep one owner per workstream and use the caller's approved model policy. Prefer one verified vertical product slice over a large collection of unused agents. Report actual test results, repository URL and limitations at delivery.

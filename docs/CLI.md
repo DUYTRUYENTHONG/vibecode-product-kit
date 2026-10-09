@@ -14,8 +14,13 @@ Run `node bin/pdk.mjs --help`. All commands are offline. Supported Node versions
 | `validate PATH --gate release` | Require production verification records for every feature | None |
 | `report PATH` | Print states, owners, blockers and measurements | stdout only |
 | `jira-export PATH` | Emit a JSON create/update review proposal, preserving external workflow fields | stdout only |
+| `route KIND --preset stos-approved [--complexity simple\|routine\|complex] [--sensitive]` | Return deterministic owner-approved model recommendation; never dispatch | stdout only |
+| `codex-install TARGET --preset stos-approved [--hooks] [--apply]` | Preview/install native profiles and skills; optional untrusted lifecycle hooks | Namespaced project files only with --apply |
 
 PATH is a JSON file or directory containing `project.json`. Exit 0 means valid record structure; exit 1 means an input/validation/I/O error. There is no `--force` or overwrite option. A release gate is a post-verification receipt check, not a pre-deploy approval mechanism. Use a separate scoped project record for an individual release; do not delete deferred roadmap features just to pass a gate.
+
+Routing takes task metadata, not a project path. See [routing policy](MODEL_ROUTING.md)
+for kinds, precedence, security-sensitive flags and runtime availability limits.
 
 ## Version 1 record contract
 
